@@ -1,0 +1,33 @@
+package com.rajesh.commercehub.apigateway.filter;
+
+import com.rajesh.commercehub.apigateway.util.JwtUtil;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.stereotype.Component;
+import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Mono;
+
+@Component
+public class AuthFilter implements GlobalFilter  {
+
+    @Override
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+
+        String authHeader =
+                exchange.getRequest().getHeaders().getFirst("Authorization");
+
+        if(authHeader == null || !authHeader.startsWith("Bearer ")) {
+            return exchange.getResponse().setComplete();
+        }
+
+        //Extract token
+        String token = authHeader.substring(7);
+
+        if(!JwtUtil.validateToken(token)){
+            return exchange.getResponse().setComplete();
+        }
+
+        return chain.filter(exchange);
+
+    }
+}
