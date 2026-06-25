@@ -31,7 +31,6 @@ A distributed e-commerce backend system built using Spring Boot Microservices ar
 ```
   Authorization: Bearer <token>
 ```
-
 ## Project Structure
 
 api-gateway/
