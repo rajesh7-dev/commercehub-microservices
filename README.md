@@ -24,6 +24,13 @@ A distributed e-commerce backend system built using Spring Boot Microservices ar
 - Secure API endpoints via API Gateway
 - Service-to-Service communication
 
+
+## Inter-service Communication
+
+- Order Service communicates with Product Service using Feign Client
+- Validates product existence and stock before placing order
+
+
 ## API Testing
 - Register: POST /auth/register
 - Login: POST /auth/login
@@ -33,11 +40,13 @@ A distributed e-commerce backend system built using Spring Boot Microservices ar
 ```
 ## Project Structure
 
+```
 api-gateway/
 auth-service/
 product-service/
 order-service/
 discovery-server/
+```
 
 ## Learning Outcomes
 - Microservices architecture
