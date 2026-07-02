@@ -1,4 +1,4 @@
-package com.rajesh.commercehub.authservice.entity;
+package com.rajesh.commercehub.auth.entity;
 
 import lombok.Data;
 

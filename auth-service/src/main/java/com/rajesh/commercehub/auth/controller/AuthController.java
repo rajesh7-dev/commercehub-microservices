@@ -1,7 +1,7 @@
-package com.rajesh.commercehub.authservice.controller;
+package com.rajesh.commercehub.auth.controller;
 
-import com.rajesh.commercehub.authservice.entity.User;
-import com.rajesh.commercehub.authservice.util.JwtUtil;
+import com.rajesh.commercehub.auth.entity.User;
+import com.rajesh.commercehub.auth.util.JwtUtil;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

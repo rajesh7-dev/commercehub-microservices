@@ -1,10 +1,10 @@
-package com.rajesh.commercehub.authservice;
+package com.rajesh.commercehub.notification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthServiceApplicationTests {
+class NotificationServiceApplicationTests {
 
     @Test
     void contextLoads() {

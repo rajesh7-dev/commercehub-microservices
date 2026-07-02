@@ -1,4 +1,4 @@
-package com.rajesh.commercehub.authservice.util;
+package com.rajesh.commercehub.auth.util;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
